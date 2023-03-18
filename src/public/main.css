@@ -14,57 +14,67 @@ html {
   padding: 0;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
 
 body {
-  min-height: 100%;
+  height: 100vh;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.screen {
-  aspect-ratio: 681/361;
-  width: 90%;
+.main {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .screen {
+  width: 90vw;
+  height: 47.7092511013vw;
+  max-width: 169.7783933518vh;
+  max-height: 90vh;
   background-image: url("assets/familiada-clear.png");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
-.screen .board-answers {
+.main .screen .board-answers {
   position: relative;
-  top: 22.2%;
-  left: 15%;
-  height: 51%;
   width: 70%;
+  height: 60%;
+  top: 21%;
+  left: 15%;
 }
-.screen .board-answers tbody .board-response-row .number, .screen .board-answers tbody .board-response-row .answer, .screen .board-answers tbody .board-response-row .points {
+.main .screen .board-answers .board-response-row {
+  height: 17%;
+}
+.main .screen .board-answers .board-response-row .number,
+.main .screen .board-answers .board-response-row .answer,
+.main .screen .board-answers .board-response-row .points {
   font-family: Familiada;
   color: rgb(175, 218, 112);
   display: inline;
-  font-size: 390%;
+  font-size: 100%;
+  transform: scale(200%);
 }
-.screen .board-answers tbody .board-response-row .number {
+.main .screen .board-answers .board-response-row .number {
   margin-left: 3%;
 }
-.screen .board-answers tbody .board-response-row .answer {
+.main .screen .board-answers .board-response-row .answer {
   margin-left: 8%;
 }
-.screen .board-answers tbody .board-response-row .points {
+.main .screen .board-answers .board-response-row .points {
   margin-left: 7.8%;
 }
-.screen .wrong-answers-col {
+.main .screen .wrong-answers-col {
   width: 9.6%;
   position: absolute;
   right: 3.4%;
   top: 5.5%;
 }
-.screen .wrong-answers-col .wrong-answer {
+.main .screen .wrong-answers-col .wrong-answer {
   margin-top: 27%;
   aspect-ratio: 64/90;
   width: 100%;
