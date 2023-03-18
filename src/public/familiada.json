@@ -1,0 +1,18 @@
+[
+    {
+        "question":"Jaki jest najpopularniejszy język programowania",
+        "answears":[{"ans":"HTML","points":45},
+                    {"ans":"Java/JavaScript","points":34},
+                    {"ans":"C/C++","points":12},
+                    {"ans":"Python","points":6},
+                    {"ans":"C#","points":3}]
+    },
+    {
+        "question":"Więcej niż jedno zwierzę?",
+        "answears":[{"ans":"Lama","points":60},
+                    {"ans":"Owca","points":20},
+                    {"ans":"Stado","points":12},
+                    {"ans":"Ławica","points":6},
+                    {"ans":"Wataha","points":2}]
+    }
+]

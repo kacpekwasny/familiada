@@ -23,50 +23,104 @@ body {
 body {
   height: 100vh;
   width: 100%;
+  background-image: url("assets/familiada-studio.jpg");
+  background-position-x: center;
+  background-size: 100%;
+  animation: bgMove 30s infinite;
 }
 
 .main {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main .screen {
-  width: 681px;
-  height: 361px;
-  background-image: url("assets/familiada-clear.png");
+.main .screen-bg {
+  width: 1365px;
+  height: 738px;
+  transform: scale(1.1);
+  background-image: url("assets/board.png");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  font-family: Familiada;
+  color: rgb(175, 218, 112);
 }
-.main .screen .board-answers {
+.main .screen-bg .top-score {
+  position: absolute;
+  left: 595px;
+  top: 45px;
+  font-size: 62px;
+  letter-spacing: 18px;
+  color: rgb(161, 222, 70);
+}
+.main .screen-bg .team-score {
+  position: absolute;
+  top: 355px;
+  font-size: 60px;
+  letter-spacing: 20px;
+}
+.main .screen-bg .left-score {
+  left: 14px;
+}
+.main .screen-bg .right-score {
+  padding-top: 5px;
+  right: -15px;
+}
+.main .screen-bg .screen {
+  top: 190px;
+  left: 346px;
+  width: 681px;
+  height: 361px;
+  position: relative;
+  font-size: 25px;
+}
+.main .screen-bg .screen .board-answers {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
   top: 73px;
-  left: 96px;
+  left: 93px;
   display: inline;
 }
-.main .screen .board-answers .board-response-row {
+.main .screen-bg .screen .board-answers .board-response-row {
   height: 37px;
+  width: 500px;
+  display: flex;
 }
-.main .screen .board-answers .board-response-row .number,
-.main .screen .board-answers .board-response-row .answer,
-.main .screen .board-answers .board-response-row .points {
-  font-family: Familiada;
-  color: rgb(175, 218, 112);
-  display: inline;
-  font-size: 25px;
+.main .screen-bg .screen .board-answers .board-response-row .number,
+.main .screen-bg .screen .board-answers .board-response-row .answer,
+.main .screen-bg .screen .board-answers .board-response-row .points {
+  letter-spacing: 3.7px;
 }
-.main .screen .board-answers .board-response-row .points {
-  margin-left: 55px;
+.main .screen-bg .screen .board-answers .board-response-row .answer {
+  width: 362px;
+  margin-left: 24px;
 }
-.main .screen .wrong-answers-col {
+.main .screen-bg .screen .wrong-answers-col {
   width: 66px;
   position: absolute;
-  right: 21px;
+  right: 22px;
   top: 23px;
 }
-.main .screen .wrong-answers-col .wrong-answer {
-  margin-top: 18px;
-  aspect-ratio: 64/90;
+.main .screen-bg .screen .wrong-answers-col .wrong-answer {
+  margin-top: 19px;
+}
+.main .screen-bg .screen .sum {
+  position: absolute;
+  bottom: 73px;
+  right: 159px;
+}
+
+@keyframes bgMove {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 135%;
+    background-position-y: -60px;
+  }
+  100% {
+    background-size: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */

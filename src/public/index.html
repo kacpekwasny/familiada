@@ -7,47 +7,41 @@
     <title>Familiada</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
 </head>
 
 <body>
-    <div class="main">
-        <div class="screen">
-            <div class="board-answers">
-                <div class="board-response-row">
-                    <p class="number">1</p>
-                    <p class="answer">. . . . . . . . . . . . . . . . . .</p>
-                    <p class="points">---</p>
-                </div>
-                <div class="board-response-row">
-                    <p class="number">2</p>
-                    <p class="answer">. . . . . . . . . . . . . . . . . .</p>
-                    <p class="points">---</p>
-                </div>
-                <div class="board-response-row">
-                    <p class="number">3</p>
-                    <p class="answer">. . . . . . . . . . . . . . . . . .</p>
-                    <p class="points">---</p>
-                </div>
-                <div class="board-response-row">
-                    <p class="number">4</p>
-                    <p class="answer">. . . . . . . . . . . . . . . . . .</p>
-                    <p class="points">---</p>
-                </div>
-                <div class="board-response-row">
-                    <p class="number">5</p>
-                    <p class="answer">. . . . . . . . . . . . . . . . . .</p>
-                    <p class="points">---</p>
-                </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <div id="app" class="main">
+        <div class="screen-bg">
+            <div class="top-score">
+                <p class="score" >{{ scores.topScore }}</p>
             </div>
-            <div class="wrong-answers-col">
-                <img src="assets/X-alpha.PNG" class="wrong-answer"></img>
-                <img src="assets/X-alpha.PNG" class="wrong-answer"></img>
-                <img src="assets/X-alpha.PNG" class="wrong-answer"></img>
+            <div class="left-score team-score">
+                <p class="score">{{ scores.leftScore }}</p>
+            </div>
+            <div class="screen">
+                <div class="board-answers">
+                    <div v-for="(answear, index) in activeAnswers" class="board-response-row">
+                        <p class="number">{{ index + 1 }}</p>
+                        <p class="answer">{{ answear.display ? answear.ans : ". ".repeat(12) }}</p>
+                        <p class="points">{{ answear.display ? answear.points : "---"  }}</p>
+                    </div>
+                </div>
+                <div class="wrong-answers-col">
+                    <img v-for="i in xs"
+                    src="assets/X-alpha.PNG" class="wrong-answer"></img>
+                </div>
+                <div class="sum">
+                    <p class="sum-text">SUMA: {{ activeAnswers.map(a => a.display ? a.points : 0).reduce((a,b)=>a+b) }}</p>
+                </div>    
+            </div>
+            <div class="right-score team-score">
+                <p class="score">{{ scores.rightScore }}</p>
             </div>
         </div>
     </div>
 
+    <script src='main.js'></script>
 </body>
 
 </html>
