@@ -32,12 +32,8 @@ body {
     align-items: center;
 
     .screen {
-        $bgH: 361;
-        $bgW: 681;
-        width: calc(100vw * 0.9);
-        height: calc(100vw * $bgH / $bgW * 0.9);
-        max-width: calc(100vh * $bgW / $bgH * 0.9);
-        max-height: calc(100vh * 0.9);
+        width: 681px;
+        height: 361px;
 
         background-image: url("assets/familiada-clear.png");
         background-size: cover;
@@ -47,44 +43,40 @@ body {
 
         .board-answers {
             position: relative;
-            width: 70%;
-            height: 60%;
-            top: 21%;
-            left: 15%;
+            width: fit-content;
+            top: 73px;
+            left: 96px;
+            display: inline;
             .board-response-row {
-                height: 17%;
+                height: 37px;
                 .number,
                 .answer,
                 .points {
                     font-family: Familiada;
                     color: rgb(175, 218, 112);
                     display: inline;
-                    font-size: 100%;
-                    transform: scale(200%);
+                    font-size: 25px;
                 }
                 .number {
-                    margin-left: 3%;
                 }
                 .answer {
-                    margin-left: 8%;
                 }
                 .points {
-                    margin-left: 7.8%;
+                    margin-left: 55px;
                 }
             }
         }
 
         .wrong-answers-col {
-            width: 9.6%;
+            width: 66px;
 
             position: absolute;
-            right: 3.4%;
-            top: 5.5%;
+            right: 21px;
+            top: 23px;
 
             .wrong-answer {
-                margin-top: 27%;
+                margin-top: 18px;
                 aspect-ratio: 64 / 90;
-                width: 100%;
             }
         }
     }
