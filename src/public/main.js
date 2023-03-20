@@ -4,7 +4,7 @@ Vue.createApp({
             scores: {
                 leftScore: '000',
                 rightScore: '000',
-                topScore: '000',
+                topScore: 'STP',
             },
             familiada: [],
             activeAnswers: [],
