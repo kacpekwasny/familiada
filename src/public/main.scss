@@ -50,12 +50,22 @@ body {
         font-family: Familiada;
         color: rgb(175, 218, 112);
 
+        .score {
+            background-color: transparent;
+            font: inherit;
+            font-style: inherit;
+            color: inherit;
+            font-size: 70px;
+            border: none;
+            width: 200px;
+            letter-spacing: 10px;
+        }
+
         .top-score {
             position: absolute;
-            left: 595px;
+            left: 590px;
             top: 45px;
             font-size: 62px;
-            letter-spacing: 18px;
             color: rgb(161, 222, 70);
         }
 
@@ -67,11 +77,11 @@ body {
         }
 
         .left-score {
-            left: 14px;
+            left: 12px;
+            top: 345px;
         }
 
         .right-score {
-            padding-top: 5px;
             right: -15px;
         }
 
@@ -94,6 +104,10 @@ body {
                     height: 37px;
                     width: 500px;
                     display: flex;
+
+                    &:hover {
+                        color: rgb(51, 245, 255);
+                    }
     
                     .number,
                     .answer,

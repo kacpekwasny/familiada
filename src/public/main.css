@@ -46,12 +46,21 @@ body {
   font-family: Familiada;
   color: rgb(175, 218, 112);
 }
+.main .screen-bg .score {
+  background-color: transparent;
+  font: inherit;
+  font-style: inherit;
+  color: inherit;
+  font-size: 70px;
+  border: none;
+  width: 200px;
+  letter-spacing: 10px;
+}
 .main .screen-bg .top-score {
   position: absolute;
-  left: 595px;
+  left: 590px;
   top: 45px;
   font-size: 62px;
-  letter-spacing: 18px;
   color: rgb(161, 222, 70);
 }
 .main .screen-bg .team-score {
@@ -61,10 +70,10 @@ body {
   letter-spacing: 20px;
 }
 .main .screen-bg .left-score {
-  left: 14px;
+  left: 12px;
+  top: 345px;
 }
 .main .screen-bg .right-score {
-  padding-top: 5px;
   right: -15px;
 }
 .main .screen-bg .screen {
@@ -87,6 +96,9 @@ body {
   height: 37px;
   width: 500px;
   display: flex;
+}
+.main .screen-bg .screen .board-answers .board-response-row:hover {
+  color: rgb(51, 245, 255);
 }
 .main .screen-bg .screen .board-answers .board-response-row .number,
 .main .screen-bg .screen .board-answers .board-response-row .answer,

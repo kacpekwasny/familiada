@@ -14,12 +14,12 @@
     <div id="app" class="main">
         <div class="screen-bg">
             <div class="top-score">
-                <p class="score" >{{ scores.topScore }}</p>
+                <input class="score" v-model="scores.topScore">
             </div>
             <div class="left-score team-score">
-                <p class="score">{{ scores.leftScore }}</p>
+                <input class="score" v-model="scores.leftScore">
             </div>
-            <div class="screen">
+            <div id="screen" class="screen">
                 <div class="board-answers">
                     <div v-for="(answear, index) in activeAnswers" class="board-response-row">
                         <p class="number">{{ index + 1 }}</p>
@@ -36,7 +36,7 @@
                 </div>    
             </div>
             <div class="right-score team-score">
-                <p class="score">{{ scores.rightScore }}</p>
+                <input class="score" v-model="scores.rightScore">
             </div>
         </div>
     </div>
